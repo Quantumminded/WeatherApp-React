@@ -5,21 +5,23 @@ function App() {
 
   const apiKey = '6cbae67f2f27d83ccede5cf2d7de4f00'
   const [weatherData, setWeatherData] = useState([{}])
-  const [city, setCity] = ('')
+  const [city, setCity] = ("")
 
   const getWeather = (event) => {
     if (event.key === "Enter") {
-      fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=9&appid=${apiKey}`).then(
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}`)
+      .then(
         response => response.json()
         ).then(
           data => {
             setWeatherData(data)
             setCity("")
+            console.log(setWeatherData(data))
           }
         )
     }
   }
-
+  
   return (
     <div className='container'>
       <input 
