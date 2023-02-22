@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const api = {
-  key: "6cbae67f2f27d83ccede5cf2d7de4f00",
+  key: "2ae58be525bd9213e3b04d03278e475a",
   base: "http://api.openweathermap.org/data/2.5/"
 }
 
@@ -19,7 +19,6 @@ function App() {
           setWeather(result);
           setQuery('');
           console.log(result)
-          console.log(weather.weather[0].main)
         })
     }
   }
@@ -53,7 +52,7 @@ function App() {
              onKeyPress={search}>
           </input>
         </div>
-        {(typeof weather.main !="undifined") ?(
+        {(typeof weather.main !="undefined") ?(
         <div>
           <div className='location-box'>
             <div className='location'>{weather.name}, {weather.sys.country}</div>
