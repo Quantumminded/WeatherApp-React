@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 const api = {
-  key: process.env.REACT_APP_API_KEY,
+  key: API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -27,7 +29,6 @@ function App() {
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
 
     let day = days[d.getDay()]
     let date = d.getDate();
