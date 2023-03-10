@@ -1,6 +1,6 @@
 # Simple Weather App
 
-This project is a simple weather app built using React and the OpenWeatherMap API. The app allows users to search for the current weather conditions in any city around the world.
+This project is a weather app built using React and the OpenWeatherMap API. The app allows users to search for the current weather conditions in any city around the world.
 
 ## Technologies Used
 
